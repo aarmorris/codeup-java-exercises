@@ -38,7 +38,19 @@ public class syntaxLecture {
             System.out.println(myFavoriteNumber);
 
             String myString = "I miss my grandmother";
-            System.out.println(myString);
+            System.out.println(myString +" 3.14159");
+
+            double myNumber = 3.14;
+            System.out.println(myNumber);
+
+            int x = 5;
+            System.out.println(++x);
+            System.out.println(x);
+
+            String theNumberThree = "three";
+            Object o = theNumberThree;
+            int three = (int) o;
+
 
 
 
