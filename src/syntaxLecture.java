@@ -51,9 +51,5 @@ public class syntaxLecture {
             Object o = theNumberThree;
             int three = (int) o;
 
-
-
-
-
     }
 }
