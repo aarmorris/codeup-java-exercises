@@ -13,6 +13,6 @@ public class FighterTest {
         Fighter fighter2 = new Fighter();
         fighter2.name = "Sozalix";
         fighter2.battleRoar();
-
+        System.out.println(Club.maxDamage);
     }
 }
