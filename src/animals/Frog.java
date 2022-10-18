@@ -1,8 +1,8 @@
 package animals;
 
 public class Frog {
-    private String name;
-    private String sound;
+    String name;
+    public String sound;
     public void makeNoise(){
         System.out.printf(" %s goes %s", name,sound);
     }

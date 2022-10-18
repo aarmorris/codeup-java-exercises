@@ -1,7 +1,7 @@
 public class Fighter {
     // Instance variables
     // set to private
-    private String name;
+    String name;
     private int hitPoints;
     // setter -- set to public
     public void setHitPoints(int hitPoints){
@@ -32,5 +32,7 @@ public class Fighter {
 
     }
 
-    public Fighter(String name, int hitPoints, int maxDamage)
+    public Fighter(String name, int hitPoints, int maxDamage) {
+
+    }
 }
