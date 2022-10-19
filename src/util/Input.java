@@ -50,7 +50,7 @@ public class Input {
 
 
     public double getDouble(double min, double max) {
-        System.out.print("Enter a number with a decimal:");
+       String prompt = "Enter a number with a decimal:" + min + " and " + max;
         int input = scanner.nextInt();
         scanner.nextLine();
         if (input < min || input > max) {
@@ -61,8 +61,8 @@ public class Input {
         }
     }
 
-    public double getDouble(){
-        System.out.println("Enter an number:");
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         return scanner.nextInt();
     }
 
