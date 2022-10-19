@@ -6,5 +6,6 @@ public class InputTest {
         input.getInteger(1,85);
         System.out.println(input.yesNo());
         System.out.println(input.getInt());
+//        System.out.println(input.getDouble(12.4, 78.773));
     }
 }

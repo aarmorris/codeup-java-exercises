@@ -12,5 +12,11 @@ public class Person {
         System.out.printf("Hello %s", this.name);
     }
 
+    public Person(){}
+
+    public Person(String name){
+        this.name = name;
+    }
+
 }
 

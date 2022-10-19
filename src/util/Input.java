@@ -17,11 +17,11 @@ public class Input {
         return scanner.nextLine();
     }
 
-
+        // Added the ignoreCase to userInput during Javier's lecture.
     public boolean yesNo() {
         System.out.println("Enter input y/n:");
         String userInput = scanner.nextLine();
-        if (userInput.equals("y") || userInput.equals("yes")) {
+        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             return true;
         } else {
             return false;
@@ -59,6 +59,11 @@ public class Input {
         } else {
             return input;
         }
+    }
+
+    public double getDouble(){
+        System.out.println("Enter an number:");
+        return scanner.nextInt();
     }
 
     public Input() {
