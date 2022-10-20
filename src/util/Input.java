@@ -17,6 +17,11 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
         // Added the ignoreCase to userInput during Javier's lecture.
     public boolean yesNo() {
         System.out.println("Enter input y/n:");
@@ -69,5 +74,9 @@ public class Input {
     public Input() {
         scanner = new Scanner(System.in);
     }
+
+
+
+
 
 }
