@@ -1,8 +1,8 @@
 package animals;
 
-public class Bird {
+abstract public class Bird {
 
-    private String name;
+    protected String name;
 
 
     public String getName() {
@@ -21,5 +21,9 @@ public class Bird {
         for(Bird bird : birdsArray){
             bird.makeNoise();
         }
+    }
+
+    public Bird(){
+        System.out.println("A bird just got constructed");
     }
 }
