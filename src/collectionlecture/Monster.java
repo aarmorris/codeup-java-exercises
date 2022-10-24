@@ -1,6 +1,8 @@
 package collectionlecture;
 
-public class Monster {
+import java.util.Comparator;
+
+public class Monster implements Comparator<Monster> {
 
     private String name;
     private int armorClass;
@@ -41,6 +43,17 @@ public class Monster {
     public String toString(){
         return name;
     }
+
+    // To create a custom comparison method, we implement Comparable<ObjectClassName>
+    // in the object  class. We can use this syntax:
+
+    public int compare(Monster m1, Monster m2){
+        return Integer.compare(m2.getHitPoints(), m1.getHitPoints());
+    }
+
+
+    // To create a custom comparison method, we implement Comparable<ObjectClassName>
+    //
 
     public Monster(){}
 
