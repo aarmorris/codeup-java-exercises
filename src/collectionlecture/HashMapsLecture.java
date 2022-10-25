@@ -85,8 +85,21 @@ public class HashMapsLecture {
         monsterHashMap.forEach((key, monster) -> {
             System.out.printf("The %s has %d hit points, an armor class of %d, and does %d damage.%n", monster, monster.getHitPoints(), monster.getArmorClass(), monster.getDamage());
         });
+        // This loop is included in lecture notes
+        Object[] monstersArray = monsterHashMap.values().toArray();
+        for (Object monster : monstersArray){
+            int hitPoints = ((Monster) monster).getHitPoints();
+            System.out.println(hitPoints);
+        }
+        // Use the Collection toArray() method to convert a collection of
+        // HashMap values into an array of objects
+        // Each value in a HashMap is an object
+        // Using .values().toArray() we can create an array of objects
 
-
+        Monster[] monstersArray2 = monsterHashMap.values().toArray(new Monster[0]);
+        for (Monster monster : monstersArray2){
+            System.out.println(monster.getName() + " has " + monster.getHitPoints() + " hit points");
+        }
 
     }// end of main method
 }// end of class

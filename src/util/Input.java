@@ -2,7 +2,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    public static Scanner scanner;
 
     public Scanner getScanner() {
         return scanner;
@@ -23,13 +23,13 @@ public class Input {
     }
 
         // Added the ignoreCase to userInput during Javier's lecture.
-    public boolean yesNo() {
+    public static void yesNo(String s) {
         System.out.println("Enter input y/n:");
         String userInput = scanner.nextLine();
         if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
-            return true;
+            System.out.println("Would you like to enter a new item");
         } else {
-            return false;
+            System.out.println("The end");
         }
     }
 
