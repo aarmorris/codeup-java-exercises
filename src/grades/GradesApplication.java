@@ -2,17 +2,14 @@ package grades;
 
 import collectionlecture.Monster;
 import util.Input;
-
+import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 import static java.util.Map.entry;
-import static util.Input.scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
-        HashMap<String, Student> gitHubUsers = new HashMap<String, Student>();
 
         Student mason = new Student("Mason");
         mason.addGrade(88);
@@ -34,6 +31,9 @@ public class GradesApplication {
         charles.addGrade(95);
         charles.addGrade(68);
         charles.addGrade(90);
+
+        HashMap<String, Student> gitHubUsers = new HashMap<String, Student>();
+
         Map<String, Student> gitHubStudents = Map.ofEntries(
                 entry("woodymas", mason),
                 entry("aarmorris", aaron),
@@ -43,11 +43,7 @@ public class GradesApplication {
         );
 
         gitHubUsers.putAll(gitHubStudents);
-
-
-
-
-
+        Scanner scanner = new Scanner(System.in);
 
         String goAgain = "y";  // Created this so when the user answer yes it continues
         while (goAgain.equalsIgnoreCase("y")) {  // while the user enter yes go again
@@ -59,25 +55,25 @@ public class GradesApplication {
             });
             System.out.printf("%nWhat student would you like to see more information on?%n");
             String userAnswer = scanner.nextLine();
+
             if (gitHubStudents.containsKey(userAnswer)) {
                 Student ghUsers = gitHubUsers.get(userAnswer);
-                System.out.printf("Name: %s - GitHub Username: %s%n" +
-                        "Current Average: %.2f%n", ghUsers.getName()); // --- Stopped here
-            } else if (userAnswer.endsWith("!")) {
-                System.out.println("Whoa chill out");
-            } else if (userAnswer.equals("")) {
-                System.out.println("Fine. Be That Way!");
-            } else if (userAnswer.equalsIgnoreCase("are robots taking over")) {
-                System.out.println("Of course");
-            } else if (userAnswer.equalsIgnoreCase("tell a joke")) {
-                System.out.printf("Why did the chicken cross the road%n.... idk %n");
+                System.out.printf("Name: %s - GitHub Username: %s%n Current Average: %.2f%n", ghUsers.getName(), userAnswer,ghUsers.getGradeAverage()); // --- Stopped here
             } else {
                 System.out.println("WhatEver");
             }
+            System.out.println("Do you want to continue?");
+            goAgain = scanner.next();
+            if (goAgain.equals("n") || goAgain.equals("no")){
+                System.out.println("Goodbye, and have a wonderful day!");
+                break;
+            }
+            scanner.nextLine();
+        } // end of while loop
 
+
+        }
 
     }
-
-}
 
 
