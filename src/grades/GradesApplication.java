@@ -1,7 +1,5 @@
 package grades;
 
-import collectionlecture.Monster;
-import util.Input;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;

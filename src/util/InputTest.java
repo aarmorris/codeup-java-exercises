@@ -1,7 +1,7 @@
 package util;
 public class InputTest {
     public static void main(String[] args) {
-        Input input = new Input();
+        InputMoreBetter input = new InputMoreBetter();
         System.out.println("Would you like to create a grocery list?");
         input.yesNo("Would you like to see another student? Y/N");
 //        System.out.println(input.getString());

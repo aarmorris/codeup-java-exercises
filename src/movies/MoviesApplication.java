@@ -1,10 +1,10 @@
 package movies;
-import util.Input;
+import util.InputMoreBetter;
 
 
 public class MoviesApplication {
     public static void main(String[] args) {
-        Input input = new Input();
+        InputMoreBetter input = new InputMoreBetter();
 
         Movie[] movies = MoviesArray.findAll();    // This will assign all the movies to the variable
         String userChoice = "timmmmmeh"; // We put timmehh because if  can equal to anything
