@@ -1,6 +1,6 @@
 package shapes;
 
-public class ShapeTest {
+public class ShapesTest {
     public static void main(String[] args) {
 //        Polymorphism polymorphism = new Polymorphism(10);
 //        System.out.println(polymorphism.getArea());
